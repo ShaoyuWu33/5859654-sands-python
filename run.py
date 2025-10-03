@@ -22,4 +22,24 @@ shifted_step = time_shift(step_signal, 5)
 # Time scaling
 scale_factor = 0.5  
 scaled_sinusoid = time_scale(sinusoid, scale_factor)
-scaled_step = time_scale(step_signal, 2)  ale
+scaled_step = time_scale(step_signal, 2)  
+
+# 3. Plot Signals
+
+def plot_signal(x, y, title, xlabel, ylabel):
+    plt.figure(figsize=(8, 4))
+    plt.plot(x, y, marker='o' if len(x) < 100 else None)
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+# Sinusoidal plots
+plot_signal(t, sinusoid, "Original Sinusoidal Signal", "Time [s]", "Amplitude")
+plot_signal(t, shifted_sinusoid, f"Time-Shifted Sinusoidal (+{shift_samples} samples)", "Time [s]"", "Amplitude")
+
+# Unit Step plots
+plot_signal(n, step_signal, "Original Unit Step Signal", "n (samples)", "Amplitude")
+plot_signal(n, shifted_step, "Time-Shifted Unit Step Signal", "n (sammples)", "Amplitude")ale
