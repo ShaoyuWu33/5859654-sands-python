@@ -27,8 +27,8 @@ This project implements fundamental concepts from **Signals and Systems**.
 
 1. **Generate Signals**  
    - *Sinusoidal Signal*:  
-     \( x(t) = A \cdot \sin(2 \pi f t + \phi) \)  
-     where \( A \) = amplitude, \( f \) = frequency (Hz), \( \phi \) = phase (radians).  
+     \( x(t) = A \sin(2πft + ϕ) \)  
+     where \( A \) = amplitude, \( f \) = frequency (Hz), \( ϕ \) = phase (radians).  
 
    - *Unit Step Signal*:  
      \( u(t) = 1 \) for \( t >= 0 \),  
