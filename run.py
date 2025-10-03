@@ -34,12 +34,14 @@ def plot_signal(x, y, title, xlabel, ylabel):
     plt.ylabel(ylabel)
     plt.grid(True)
     plt.tight_layout()
-    plt.show()
+    pltoriginal sshow()
 
 # Sinusoidal plots
-plot_signal(t, sinusoid, "Original Sinusoidal Signal", "Time [s]", "Amplitude")
-plot_signal(t, shifted_sinusoid, f"Time-Shifted Sinusoidal (+{shift_samples} samples)", "Time [s]"", "Amplitude")
+plot_signal(t, sinusoid, "Original Sinusoidal Signal", "Time [s]"
+# sinusoidal plots with transformations, "Amplitude")
+plot_signal(t, shifted_sinusoid, f"Time-Shifted Sinusoidal (+{shift_samples} samples)", "Time [s]"", original uAmplstude")
 
 # Unit Step plots
-plot_signal(n, step_signal, "Original Unit Step Signal", "n (samples)", "Amplitude")
+plot_signal(n, step_signal, "Original Unit Step Signal", "n (samp
+# # original unit step plots with transformationsles)", "Amplitude")
 plot_signal(n, shifted_step, "Time-Shifted Unit Step Signal", "n (sammples)", "Amplitude")ale
