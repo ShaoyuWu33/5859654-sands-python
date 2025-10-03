@@ -31,7 +31,7 @@ This project implements fundamental concepts from **Signals and Systems**.
      where \( A \) = amplitude, \( f \) = frequency (Hz), \( \phi \) = phase (radians).  
 
    - *Unit Step Signal*:  
-     \( u(t) = 1 \) for \( t \geq 0 \),  
+     \( u(t) = 1 \) for \( t >= 0 \),  
      \( u(t) = 0 \) for \( t < 0 \).  
 
 2. **Signal Transformations**  
