@@ -9,4 +9,13 @@ def generate_sinusoidal_signal(frequency, duration, sampling_rate, amplitude, ph
 def generate_unit_step(length):
     n = np.arange(length)
     u = np.where(n >= 0, 1, 0)
-    return n, u.
+    return n, u
+
+def time_shift(signal: np.array, shift):
+    if shift > 0:
+        shifted_signal = np.concatenate((np.zeros(shift), signal[:-shift]))
+    elif shift < 0:
+        shifted_signal = np.concatenate((signal[-shift:], np.zeros(-shift)))
+    else:
+        shifted_signal = signal
+    return shifted_signal.
