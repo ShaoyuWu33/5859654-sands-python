@@ -22,5 +22,18 @@ def test_generate_unit_step():
     # Check values (only 0s and 1s)
     assert set(u) == {nd 1"
     # Check step starts at n=0
-    assert u[at n=0"
+    assert u[a
+# 3. Test: time_shift
+def test_time_shift():
+    x = np.array([1, 2, 3, 4, 5])
+    shifted_right = time_shift(x, 2)
+    shifted_left = time_shift(x, -2)
+
+    # Right shift → first 2 zeros, rest shifted
+    assert np.array_equal(shifted_right[:2], np.zeros(2))
+    assert np.array_equal(shifted_right[2:], x[:-2])
+
+    # Left shift → last 2 zeros, rest shifted
+    assert np.array_equal(shifted_left[-2:], np.zeros(2))
+    assert np.array_equal(shifted_left[:-2], x[2:])t n=0"
 
