@@ -33,5 +33,15 @@ def test_time_shift():
     assert np.array_equal(shifted_right[2:], x[:-2])
     # Left shift → last 2 zeros, rest shifted
     assert np.array_equal(shifted_left[-2:], np.zeros(2))
-    assert np.array_equal(shifted_left[:-2], x[2:])t n=0"
+    assert np.array_equal(shifted_left[:-2], x[2:])
+
+# 4. Test: time_scale
+def test_time_scale():
+    x = np.linspace(0, 1, 10)
+    scaled_half = time_scale(x, 0.5)   
+    scaled_double = time_scale(x, 2)  
+    # Expanded signal should have more samples
+    assert len(scaled_half) > len(x)
+    # Compressed signal should have fewer samples
+    assert len(scaled_double) < len(x)t n=0"
 
