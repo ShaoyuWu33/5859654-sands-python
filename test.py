@@ -1,23 +1,17 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "f759af7b-2b0f-44e6-9e4a-9be113b3dfce",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "",
-   "name": ""
-  },
-  "language_info": {
-   "name": ""
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+import numpy as np
+from signals import generate_sinusoidal_signal, generate_unit_step, time_shift, time_scale# 1. Test: generate_sinusoidal_signal
+def test_generate_sinusoidal_signal():
+    freq = 5
+    duration = 1
+    sampling_rate = 100
+    amplitude = 2
+    phase = 0
+
+    t, x = generate_sinusoidal_signal(freq, duration, sampling_rate, amplitude, phase)
+
+    # Check array lengths
+    assert len(t) == len(x)
+    # Check amplitude range
+    assert np.all(np.abs(x) <= amplitude + 1e-6)
+    # Check signal mean approximately zero (for full periods)
+    assert abs(np.mean(x)) < 0.1
