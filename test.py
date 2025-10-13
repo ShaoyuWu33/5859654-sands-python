@@ -43,5 +43,13 @@ def test_time_scale():
     # Expanded signal should have more samples
     assert len(scaled_half) > len(x)
     # Compressed signal should have fewer samples
-    assert len(scaled_double) < len(x)t n=0"
+    assert len(scaled_double) < len(x)
+
+# 5. Run all tests manually
+if __name__ == "__main__":
+    test_generate_sinusoidal_signal()
+    test_generate_unit_step()
+    test_time_shift()
+    test_time_scale()
+    print("All tests passed successfully!")t n=0"
 
