@@ -91,7 +91,28 @@ def time_shi
         shifted_signal = signal
     return shifted_signal
 
-def time_scale(signal: np.array, scale):
+def time_sca
+    """
+    Perform time scaling (compression or expansion) on a discrete signal.
+
+    Parameters
+    ----------
+    signal : numpy.ndarray
+        Input signal array.
+    scale : float
+        Scaling factor
+
+    Returns
+    -------
+    scaled_signal : numpy.ndarray
+        Scaled version of the input signal.
+
+    Notes
+    -----
+    This function uses linear interpolation to resample the signal.
+    scale < 1 → time expansion (slower, longer signal)
+    scale > 1 → time compression (faster, shorter signal)
+    """le(signal: np.array, scale):
     n = np.arange(len(signal))
     new_length = int(len(signal) / scale)
     new_n = np.linspace(0, len(signal) - 1, new_length)
