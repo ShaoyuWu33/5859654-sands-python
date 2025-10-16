@@ -61,7 +61,28 @@ def
     u = np.where(n >= 0, 1, 0)
     return n, u
 
-def time_shift(signal: np.array, shift):
+def time_shi
+    """
+    Perform a time shift (delay or advance) on a discrete signal.
+
+    Parameters
+    ----------
+    signal : numpy.ndarray
+        Input signal array.
+    shift : int
+        Number of samples to shift.
+        Positive → right shift (delay)
+        Negative → left shift (advance)
+
+    Returns
+    -------
+    shifted_signal : numpy.ndarray
+        Time-shifted version of the input signal.
+
+    Notes
+    -----
+    The signal adds zeros on the side opposite to the shift direction.
+    """ft(signal: np.array, shift):
     if shift > 0:
         shifted_signal = np.concatenate((np.zeros(shift), signal[:-shift]))
     elif shift < 0:
