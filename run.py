@@ -27,6 +27,33 @@ scaled_step = time_scale(step_signal, 2)
 # 3. Plot Signals
 
 def plot_signal(x, y, title, xlabel, ylabel, plot_name):
+    """
+    Plot a signal and save it as an image file.
+
+    Parameters
+    ----------
+    x : numpy.ndarray
+        Independent variable (time or sample index).
+    y : numpy.ndarray
+        Dependent variable (signal amplitude).
+    title : str
+        Plot title.
+    xlabel : str
+        Label for the x-axis.
+    ylabel : str
+        Label for the y-axis.
+    plot_name : str
+        File name for saving the figure (e.g., 'signal.png').
+
+    Returns
+    -------
+    None
+        The function displays and saves the plot.
+
+    Notes
+    -----
+    If the signal length is short (<100 points), markers are added for clarity.
+    """
     plt.figure(figsize=(8, 4))
     plt.plot(x, y, marker='o' if len(x) < 100 else None)
     plt.title(title)
