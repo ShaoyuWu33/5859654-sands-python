@@ -25,4 +25,4 @@ def time_scale(signal: np.array, scale):
     new_length = int(len(signal) / scale)
     new_n = np.linspace(0, len(signal) - 1, new_length)
     scaled_signal = np.interp(new_n, n, signal)
-    return scaled_signal.
+    return scaled_signal
