@@ -20,7 +20,7 @@ def test_generate_sinusoidal_signal():
     # Check amplitude range
     assert np.all(np.abs(x) <= amplitude + 1e-6)
     # Check signal mean approximately zero (for full periods)
-    assert abs(np.mean(x)) < 0.1\
+    assert abs(np.mean(x)) < 0.1
     
 # 2. Test generate_unit_step
 def test_generate_unit_step():
@@ -39,8 +39,17 @@ def test_generate_unit_step():
     assert set(u) == {0, 1}
     # Check step starts at n=0
     assert u[0] == 1
+
 # 3. Test: time_shift
 def test_time_shift():
+    """
+    Unit test for time_shift().
+    
+    Verifies:
+    - Right shift adds zeros to the beginning.
+    - Left shift adds zeros to the end.
+    - Data shifts correctly.
+    """
     x = np.array([1, 2, 3, 4, 5])
     shifted_right = time_shift(x, 2)
     shifted_left = time_shift(x, -2)
@@ -67,5 +76,5 @@ if __name__ == "__main__":
     test_generate_unit_step()
     test_time_shift()
     test_time_scale()
-    print("All tests passed successfully!")t n=0"
+    print("All tests passed successfully!")
 
