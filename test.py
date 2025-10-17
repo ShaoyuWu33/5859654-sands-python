@@ -1,6 +1,14 @@
 import numpy as np
 from signals import generate_sinusoidal_signal, generate_unit_step, time_shift, time_scale# 1. Test generate_sinusoidal_signal
 def test_generate_sinusoidal_signal():
+    """
+    Unit test for generate_sinusoidal_signal().
+    
+    Verifies:
+    - Output arrays have equal length.
+    - Signal amplitude does not exceed expected range.
+    - Signal mean is approximately zero for a full-period sinusoid.
+    """
     freq = 5
     duration = 1
     sampling_rate = 100
