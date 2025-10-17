@@ -1,5 +1,7 @@
 import numpy as np
-from signals import generate_sinusoidal_signal, generate_unit_step, time_shift, time_scale# 1. Test generate_sinusoidal_signal
+from signals import generate_sinusoidal_signal, generate_unit_step, time_shift, time_scale
+import pytest
+# 1. Test generate_sinusoidal_signal
 def test_generate_sinusoidal_signal():
     """
     Unit test for generate_sinusoidal_signal().
@@ -75,13 +77,5 @@ def test_time_scale():
     # Expanded signal should have more samples
     assert len(scaled_half) > len(x)
     # Compressed signal should have fewer samples
-    assert len(scaled_double) < len(x)
-
-# 5. Run all tests manually
-if __name__ == "__main__":
-    test_generate_sinusoidal_signal()
-    test_generate_unit_step()
-    test_time_shift()
-    test_time_scale()
-    print("All tests passed successfully!")
+    assert len(scaled_double) < llly!")
 
