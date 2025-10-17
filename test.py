@@ -62,6 +62,13 @@ def test_time_shift():
 
 # 4. Test: time_scale
 def test_time_scale():
+    """
+    Unit test for time_scale().
+    
+    Verifies:
+    - Time expansion increases signal length.
+    - Time compression decreases signal length.
+    """
     x = np.linspace(0, 1, 10)
     scaled_half = time_scale(x, 0.5)   
     scaled_double = time_scale(x, 2)  
