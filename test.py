@@ -24,13 +24,21 @@ def test_generate_sinusoidal_signal():
     
 # 2. Test generate_unit_step
 def test_generate_unit_step():
+    """
+    Unit test for generate_unit_step().
+    
+    Verifies:
+    - Output arrays have equal length.
+    - Values are only 0 or 1.
+    - Signal starts with a step at n = 0.
+    """
     n, u = generate_unit_step(10)
     # Check length
-    assert len(n) == lenth"
+    assert len(n) == len(u)
     # Check values (only 0s and 1s)
-    assert set(u) == {nd 1"
+    assert set(u) == {0, 1}
     # Check step starts at n=0
-    assert u[a
+    assert u[0] == 1
 # 3. Test: time_shift
 def test_time_shift():
     x = np.array([1, 2, 3, 4, 5])
