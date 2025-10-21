@@ -1,4 +1,3 @@
-pip install pytest
 import numpy as np
 from signals import generate_sinusoidal_signal, generate_unit_step, time_shift, time_scale
 import pytest
