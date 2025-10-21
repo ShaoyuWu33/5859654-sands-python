@@ -1,6 +1,6 @@
 import os
-import matplotlib.pyplot as plnp
-from signals import generate_sinusoidal, generate_step, time_shift, time_sc
+import matplotlib.pyplot as plt
+from signals import generate_sinusoidal_signal, generate_unit_step, time_shift, time_scale
 #1 Generate signals
 # Sinusoidal signal parameters
 freq = 5           # Hz
