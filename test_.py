@@ -1,6 +1,5 @@
 import numpy as np
 from signals import generate_sinusoidal_signal, generate_unit_step, time_shift, time_scale
-#from signals import timeshift
 import pytest
 # 1. Test generate_sinusoidal_signal
 def test_generate_sinusoidal_signal():
